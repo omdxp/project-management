@@ -1,14 +1,14 @@
-import { Project, ProjectStatus } from "../models/project.js";
+import { Project, ProjectStatus } from "../models/project";
 
-import { Autobind } from "../decorators/autobind.js";
-import { Component } from "./base-component.js";
-import { DragTarget } from "../models/drag-drop.js";
-import { ProjectItem } from "./project-item.js";
-import { projectState } from "../state/project-state.js";
+import { Autobind } from "../decorators/autobind";
+import Cmp from "./base-component";
+import { DragTarget } from "../models/drag-drop";
+import { ProjectItem } from "./project-item";
+import { projectState } from "../state/project-state";
 
 // ProjectList Class
 export class ProjectList
-  extends Component<HTMLDivElement, HTMLElement>
+  extends Cmp<HTMLDivElement, HTMLElement>
   implements DragTarget
 {
   assignedProjects: Project[];
